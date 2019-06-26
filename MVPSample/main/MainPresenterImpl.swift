@@ -9,12 +9,11 @@
 import Foundation
 
 class MainPresenterImpl: MainPresenter {
-    
     var counter = 0
     
     private weak var view: MainView!
     
-    init(view: MainView) {
+    func setUp(view: MainView) {
         self.view = view
     }
     

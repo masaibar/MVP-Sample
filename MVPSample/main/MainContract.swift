@@ -10,6 +10,8 @@ import Foundation
 
 protocol MainPresenter: AnyObject {
     
+    func setUp(view: MainView)
+    
     func onClickButton()
 }
 
