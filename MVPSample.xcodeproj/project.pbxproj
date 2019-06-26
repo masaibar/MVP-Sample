@@ -15,6 +15,7 @@
 		B96BD01322C1DFE300E1F35E /* MVPSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD01222C1DFE300E1F35E /* MVPSampleTests.swift */; };
 		B96BD01F22C207BF00E1F35E /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD01E22C207BF00E1F35E /* MainContract.swift */; };
 		B96BD02122C2090C00E1F35E /* MainPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD02022C2090C00E1F35E /* MainPresenterImpl.swift */; };
+		B96BD02422C306DA00E1F35E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96BD02322C306DA00E1F35E /* Swinject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		B96BD01422C1DFE300E1F35E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96BD01E22C207BF00E1F35E /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
 		B96BD02022C2090C00E1F35E /* MainPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterImpl.swift; sourceTree = "<group>"; };
+		B96BD02322C306DA00E1F35E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96BD02422C306DA00E1F35E /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +69,7 @@
 				B96BCFFC22C1DFE200E1F35E /* MVPSample */,
 				B96BD01122C1DFE300E1F35E /* MVPSampleTests */,
 				B96BCFFB22C1DFE200E1F35E /* Products */,
+				B96BD02222C306D900E1F35E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +114,14 @@
 			path = main;
 			sourceTree = "<group>";
 		};
+		B96BD02222C306D900E1F35E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B96BD02322C306DA00E1F35E /* Swinject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +132,7 @@
 				B96BCFF622C1DFE200E1F35E /* Sources */,
 				B96BCFF722C1DFE200E1F35E /* Frameworks */,
 				B96BCFF822C1DFE200E1F35E /* Resources */,
+				B96BD02522C306F700E1F35E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -205,6 +218,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B96BD02522C306F700E1F35E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework\n",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-framewor\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B96BCFF622C1DFE200E1F35E /* Sources */ = {
@@ -378,6 +412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L38LY46757;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +434,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L38LY46757;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MVPSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

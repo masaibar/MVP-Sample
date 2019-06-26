@@ -1,0 +1,4 @@
+github "Swinject/Swinject"
+
+# Uncomment if you use SwinjectStoryboard
+# github "Swinject/SwinjectStoryboard"
