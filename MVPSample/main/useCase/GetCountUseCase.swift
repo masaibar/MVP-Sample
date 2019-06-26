@@ -6,6 +6,8 @@
 //  Copyright © 2019 Nishihara Ryo. All rights reserved.
 //
 
+import RxSwift
+
 protocol GetCountUseCase{
-    func execute() -> Int
+    func execute() -> Single<Int>
 }

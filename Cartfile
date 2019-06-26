@@ -2,3 +2,5 @@ github "Swinject/Swinject"
 github "Swinject/SwinjectStoryboard"
 # Uncomment if you use SwinjectStoryboard
 # github "Swinject/SwinjectStoryboard"
+
+github "ReactiveX/RxSwift" ~> 5.0
