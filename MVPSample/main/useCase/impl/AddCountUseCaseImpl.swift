@@ -6,6 +6,8 @@
 //  Copyright © 2019 Nishihara Ryo. All rights reserved.
 //
 
+import RxSwift
+
 class AddCountUseCaseImpl: AddCountUseCase {
     
     let countRepository: CountRepository
@@ -14,7 +16,7 @@ class AddCountUseCaseImpl: AddCountUseCase {
         self.countRepository = countRepository
     }
     
-    func execute() {
-        countRepository.increment()
+    func execute() -> Completable {
+        return countRepository.increment()
     }
 }

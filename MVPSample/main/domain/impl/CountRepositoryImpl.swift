@@ -6,6 +6,8 @@
 //  Copyright © 2019 Nishihara Ryo. All rights reserved.
 //
 
+import RxSwift
+
 class CountRepositoryImpl : CountRepository {
     
     private var count = 0
@@ -14,7 +16,10 @@ class CountRepositoryImpl : CountRepository {
        return self.count
     }
     
-    func increment() {
-        count = count + 1
+    func increment() -> Completable {
+        return Completable.create { completable in
+            self.count = self.count + 1
+            return Disposables.create()
+        }
     }
 }
