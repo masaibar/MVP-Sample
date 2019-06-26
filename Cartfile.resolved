@@ -1,1 +1,2 @@
 github "Swinject/Swinject" "2.6.2"
+github "Swinject/SwinjectStoryboard" "2.2.0"

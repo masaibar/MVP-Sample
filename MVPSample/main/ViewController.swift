@@ -11,15 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var countLabel: UILabel!
-    private var presenter: MainPresenterImpl!
+    var presenter: MainPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = MainPresenterImpl(view: self)
+        presenter?.setup(view: self)
     }
     
     @IBAction func tapCountButton(_ sender: UIButton) {
-        presenter.onClickButton()
+        presenter?.onClickButton()
     }
 }
 

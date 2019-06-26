@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57FCC40F22C3303200B61EC4 /* SwinjectStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCC40E22C3303200B61EC4 /* SwinjectStoryboardExtension.swift */; };
+		57FCC41022C331CA00B61EC4 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96BD02322C306DA00E1F35E /* Swinject.framework */; };
+		57FCC41222C331CA00B61EC4 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57FCC41122C331CA00B61EC4 /* SwinjectStoryboard.framework */; };
 		B96BCFFE22C1DFE200E1F35E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BCFFD22C1DFE200E1F35E /* AppDelegate.swift */; };
 		B96BD00022C1DFE200E1F35E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BCFFF22C1DFE200E1F35E /* ViewController.swift */; };
 		B96BD00322C1DFE200E1F35E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96BD00122C1DFE200E1F35E /* Main.storyboard */; };
@@ -15,7 +18,6 @@
 		B96BD01322C1DFE300E1F35E /* MVPSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD01222C1DFE300E1F35E /* MVPSampleTests.swift */; };
 		B96BD01F22C207BF00E1F35E /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD01E22C207BF00E1F35E /* MainContract.swift */; };
 		B96BD02122C2090C00E1F35E /* MainPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD02022C2090C00E1F35E /* MainPresenterImpl.swift */; };
-		B96BD02422C306DA00E1F35E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96BD02322C306DA00E1F35E /* Swinject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57FCC40E22C3303200B61EC4 /* SwinjectStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectStoryboardExtension.swift; sourceTree = "<group>"; };
+		57FCC41122C331CA00B61EC4 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		B96BCFFA22C1DFE200E1F35E /* MVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96BCFFD22C1DFE200E1F35E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B96BCFFF22C1DFE200E1F35E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B96BD02422C306DA00E1F35E /* Swinject.framework in Frameworks */,
+				57FCC41222C331CA00B61EC4 /* SwinjectStoryboard.framework in Frameworks */,
+				57FCC41022C331CA00B61EC4 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,7 @@
 				B96BD00422C1DFE300E1F35E /* Assets.xcassets */,
 				B96BD00622C1DFE300E1F35E /* LaunchScreen.storyboard */,
 				B96BD00922C1DFE300E1F35E /* Info.plist */,
+				57FCC40E22C3303200B61EC4 /* SwinjectStoryboardExtension.swift */,
 			);
 			path = MVPSample;
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 		B96BD02222C306D900E1F35E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57FCC41122C331CA00B61EC4 /* SwinjectStoryboard.framework */,
 				B96BD02322C306DA00E1F35E /* Swinject.framework */,
 			);
 			name = Frameworks;
@@ -228,7 +235,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework\n",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -236,7 +244,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-framewor\n";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -245,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FCC40F22C3303200B61EC4 /* SwinjectStoryboardExtension.swift in Sources */,
 				B96BD00022C1DFE200E1F35E /* ViewController.swift in Sources */,
 				B96BD01F22C207BF00E1F35E /* MainContract.swift in Sources */,
 				B96BCFFE22C1DFE200E1F35E /* AppDelegate.swift in Sources */,
