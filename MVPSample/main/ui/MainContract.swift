@@ -6,8 +6,6 @@
 //  Copyright © 2019 Nishihara Ryo. All rights reserved.
 //
 
-import Foundation
-
 protocol MainPresenter: AnyObject {
     
     func setup(view: MainView)
