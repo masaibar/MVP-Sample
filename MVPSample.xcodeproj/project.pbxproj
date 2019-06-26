@@ -18,6 +18,12 @@
 		B96BD01322C1DFE300E1F35E /* MVPSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD01222C1DFE300E1F35E /* MVPSampleTests.swift */; };
 		B96BD01F22C207BF00E1F35E /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD01E22C207BF00E1F35E /* MainContract.swift */; };
 		B96BD02122C2090C00E1F35E /* MainPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD02022C2090C00E1F35E /* MainPresenterImpl.swift */; };
+		B96BD02A22C3369700E1F35E /* CountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD02922C3369700E1F35E /* CountRepository.swift */; };
+		B96BD02D22C336D000E1F35E /* CountRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD02C22C336D000E1F35E /* CountRepositoryImpl.swift */; };
+		B96BD03022C3375100E1F35E /* GetCountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD02F22C3375100E1F35E /* GetCountUseCase.swift */; };
+		B96BD03222C3378700E1F35E /* AddCountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD03122C3378700E1F35E /* AddCountUseCase.swift */; };
+		B96BD03422C337A300E1F35E /* AddCountUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD03322C337A300E1F35E /* AddCountUseCaseImpl.swift */; };
+		B96BD03622C338B200E1F35E /* GetCountUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96BD03522C338B200E1F35E /* GetCountUseCaseImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,12 @@
 		B96BD01E22C207BF00E1F35E /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
 		B96BD02022C2090C00E1F35E /* MainPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterImpl.swift; sourceTree = "<group>"; };
 		B96BD02322C306DA00E1F35E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		B96BD02922C3369700E1F35E /* CountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountRepository.swift; sourceTree = "<group>"; };
+		B96BD02C22C336D000E1F35E /* CountRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountRepositoryImpl.swift; sourceTree = "<group>"; };
+		B96BD02F22C3375100E1F35E /* GetCountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountUseCase.swift; sourceTree = "<group>"; };
+		B96BD03122C3378700E1F35E /* AddCountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountUseCase.swift; sourceTree = "<group>"; };
+		B96BD03322C337A300E1F35E /* AddCountUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountUseCaseImpl.swift; sourceTree = "<group>"; };
+		B96BD03522C338B200E1F35E /* GetCountUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountUseCaseImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +124,9 @@
 		B96BD01D22C2078800E1F35E /* main */ = {
 			isa = PBXGroup;
 			children = (
-				B96BCFFF22C1DFE200E1F35E /* ViewController.swift */,
-				B96BD00122C1DFE200E1F35E /* Main.storyboard */,
-				B96BD01E22C207BF00E1F35E /* MainContract.swift */,
-				B96BD02022C2090C00E1F35E /* MainPresenterImpl.swift */,
+				B96BD02822C3368100E1F35E /* domain */,
+				B96BD02722C3367B00E1F35E /* useCase */,
+				B96BD02622C3365700E1F35E /* ui */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -127,6 +138,53 @@
 				B96BD02322C306DA00E1F35E /* Swinject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B96BD02622C3365700E1F35E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				B96BCFFF22C1DFE200E1F35E /* ViewController.swift */,
+				B96BD00122C1DFE200E1F35E /* Main.storyboard */,
+				B96BD01E22C207BF00E1F35E /* MainContract.swift */,
+				B96BD02022C2090C00E1F35E /* MainPresenterImpl.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		B96BD02722C3367B00E1F35E /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				B96BD02E22C3374300E1F35E /* impl */,
+				B96BD02F22C3375100E1F35E /* GetCountUseCase.swift */,
+				B96BD03122C3378700E1F35E /* AddCountUseCase.swift */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		B96BD02822C3368100E1F35E /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				B96BD02B22C336BB00E1F35E /* impl */,
+				B96BD02922C3369700E1F35E /* CountRepository.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		B96BD02B22C336BB00E1F35E /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				B96BD02C22C336D000E1F35E /* CountRepositoryImpl.swift */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		B96BD02E22C3374300E1F35E /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				B96BD03322C337A300E1F35E /* AddCountUseCaseImpl.swift */,
+				B96BD03522C338B200E1F35E /* GetCountUseCaseImpl.swift */,
+			);
+			path = impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96BD03222C3378700E1F35E /* AddCountUseCase.swift in Sources */,
+				B96BD03422C337A300E1F35E /* AddCountUseCaseImpl.swift in Sources */,
+				B96BD02D22C336D000E1F35E /* CountRepositoryImpl.swift in Sources */,
 				57FCC40F22C3303200B61EC4 /* SwinjectStoryboardExtension.swift in Sources */,
+				B96BD03022C3375100E1F35E /* GetCountUseCase.swift in Sources */,
 				B96BD00022C1DFE200E1F35E /* ViewController.swift in Sources */,
+				B96BD03622C338B200E1F35E /* GetCountUseCaseImpl.swift in Sources */,
 				B96BD01F22C207BF00E1F35E /* MainContract.swift in Sources */,
 				B96BCFFE22C1DFE200E1F35E /* AppDelegate.swift in Sources */,
 				B96BD02122C2090C00E1F35E /* MainPresenterImpl.swift in Sources */,
+				B96BD02A22C3369700E1F35E /* CountRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
