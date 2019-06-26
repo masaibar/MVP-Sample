@@ -9,7 +9,14 @@
 import Foundation
 
 class MainPresenterImpl: MainPresenter {
-    var counter = 0
+    
+    let getCountUseCase : GetCountUseCase
+    let addCountUseCase : AddCountUseCase
+    
+    init(getCountUseCase: GetCountUseCase, addCountUseCase: AddCountUseCase) {
+        self.getCountUseCase = getCountUseCase
+        self.addCountUseCase = addCountUseCase
+    }
     
     private weak var view: MainView!
     
@@ -18,7 +25,7 @@ class MainPresenterImpl: MainPresenter {
     }
     
     func onClickButton() {
-        view.showCount(count: counter)
-        counter = counter + 1
+        addCountUseCase.execute()
+        view.showCount(count: getCountUseCase.execute())
     }
 }
