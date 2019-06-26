@@ -12,13 +12,14 @@ class CountRepositoryImpl : CountRepository {
     
     private var count = 0
     
-    func get() -> Int {
-       return self.count
+    func get() -> Single<Int> {
+       return Single.just(self.count)
     }
     
     func increment() -> Completable {
         return Completable.create { completable in
             self.count = self.count + 1
+            completable(.completed)
             return Disposables.create()
         }
     }

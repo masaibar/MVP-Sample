@@ -13,7 +13,6 @@ class MainPresenterImpl: MainPresenter {
     let getCountUseCase : GetCountUseCase
     let addCountUseCase : AddCountUseCase
     
-    // TODO 破棄する処理
     let disposeBag = DisposeBag()
     
     init(getCountUseCase: GetCountUseCase, addCountUseCase: AddCountUseCase) {
@@ -28,10 +27,22 @@ class MainPresenterImpl: MainPresenter {
     }
     
     func onClickButton() {
+        self.addCount()
+    }
+    
+    private func addCount() {
         addCountUseCase.execute().subscribe(onCompleted: {
-            self.view.showCount(count: self.getCountUseCase.execute())
-        }) { (Error) in
-            print("onError called")
+            self.getCount()
+        }, onError: { (error) in
+            print("error: \(error)")
+        }).disposed(by: disposeBag)
+    }
+    
+    private func getCount() {
+        getCountUseCase.execute().subscribe(onSuccess: { (count) in
+            self.view.showCount(count: count)
+        }) { _ in
+            // do nothing
         }.disposed(by: disposeBag)
     }
 }

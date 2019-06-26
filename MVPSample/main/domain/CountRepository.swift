@@ -9,7 +9,7 @@
 import RxSwift
 
 protocol CountRepository {
-    func get() -> Int
+    func get() -> Single<Int>
     
     func increment() -> Completable
 }

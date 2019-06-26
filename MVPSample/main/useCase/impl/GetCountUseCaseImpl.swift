@@ -6,6 +6,8 @@
 //  Copyright © 2019 Nishihara Ryo. All rights reserved.
 //
 
+import RxSwift
+
 class GetCountUseCaseImpl : GetCountUseCase {
     
     let countRepository: CountRepository
@@ -14,7 +16,7 @@ class GetCountUseCaseImpl : GetCountUseCase {
         self.countRepository = countRepository
     }
     
-    func execute() -> Int {
+    func execute() -> Single<Int> {
         return countRepository.get()
     }
 }
