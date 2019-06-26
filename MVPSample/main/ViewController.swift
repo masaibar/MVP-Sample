@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.setUp(view: self)
+        presenter?.setup(view: self)
     }
     
     @IBAction func tapCountButton(_ sender: UIButton) {

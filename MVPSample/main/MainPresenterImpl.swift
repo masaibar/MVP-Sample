@@ -13,7 +13,7 @@ class MainPresenterImpl: MainPresenter {
     
     private weak var view: MainView!
     
-    func setUp(view: MainView) {
+    func setup(view: MainView) {
         self.view = view
     }
     
